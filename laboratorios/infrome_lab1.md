@@ -101,10 +101,3 @@ La disipación de potencia es un parámetro crucial para entender la eficiencia 
 
 ---
 
-Este informe puede organizarse en carpetas en el repositorio de GitHub de la siguiente manera:
-
-- `docs/` – Para almacenar documentos y el informe completo en formato Markdown.
-- `images/` – Carpeta donde se almacenarán todas las imágenes y gráficas de la práctica.
-- `simulation_files/` – Carpeta para guardar archivos de simulación SPICE u otros formatos de simuladores electrónicos.
-
-Cada una de las imágenes y gráficos mencionados en las **Instrucciones para insertar imagen** debería ser generada en la parte práctica y enlazada en el Markdown del repositorio para una mejor presentación.
