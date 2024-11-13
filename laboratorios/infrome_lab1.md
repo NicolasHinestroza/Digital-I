@@ -58,7 +58,7 @@ El **fan-out** es la cantidad de dispositivos que una puerta lógica puede contr
 | Característica             | TTL (74LS04)                 | CMOS (CD4069)                      |
 |----------------------------|------------------------------|------------------------------------|
 | **Fan-out**                | Hasta 10 puertas TTL         | Más de 50 puertas CMOS             |
-| **Fan-in**                 | Limitado a varias entradas   | Puede tener un número alto de entradas debido a la alta impedancia de entrada |
+| **Fan-in**                 | Limitado a dos entradas      | Puede tener un número alto de entradas debido a la alta impedancia de entrada |
 
 ### Disipación de Potencia
 
