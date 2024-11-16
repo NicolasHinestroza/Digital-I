@@ -1,1 +1,1 @@
-Lab01/
+laboratorio01/README.md
