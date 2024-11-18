@@ -1,11 +1,8 @@
 # Informe de Práctica I: Electrónica Digital I
 
-
-
 ## Objetivos
 
 El objetivo de esta práctica es estudiar las características de dispositivos lógicos fabricados en tecnologías TTL y CMOS mediante el análisis teórico de sus especificaciones. Posteriormente, se implementará una operación lógica para observar diferencias en parámetros como tiempo de respuesta, disipación de potencia y fan-out.
-
 
 ## Resumen Teórico
 
@@ -16,21 +13,19 @@ La electrónica digital utiliza diferentes tecnologías para construir circuitos
 
 Estas tecnologías difieren en términos de voltaje de operación, disipación de potencia, tiempos de retardo y capacidad de carga (fan-out), lo que afecta su idoneidad en diferentes aplicaciones electrónicas.
 
-
 ## Comparación de Dispositivos TTL y CMOS
 
 ### Características Generales
 
 | Característica               | TTL (74LS04)                    | CMOS (CD4069)                  |
-|------------------------------|---------------------------------|--------------------------------|
-| Voltaje de operación         | 5V                              | 3V - 18V                       |
-| Rango de temperatura         | -55 °C a 125 °C                | -55 °C a 125 °C                |
+|------------------------------|----------------------------------|--------------------------------|
+| Voltaje de operación         | 5V                              | 3V - 15V                      |
+| Rango de temperatura         | 0 °C a 70 °C                   | -40 °C a 85 °C                |
 | Tiempo de retardo de propagación | 10 ns (más rápido)              | 25-50 ns (más lento)           |
 | Disipación de potencia       | 1 mW - 20 mW por compuerta     | 0.2 mW - 10 mW                 |
 | Corriente de salida          | 8 mA                           | 6.8 mA                         |
 | Número de compuertas         | 6                              | 6                              |
 | Número de pines              | 14                             | 14                             |
-
 
 ### Voltajes de Entrada y Salida
 
@@ -38,10 +33,10 @@ Cada dispositivo tiene niveles de voltaje de entrada y salida para distinguir en
 
 | Parámetro                       | TTL (74LS04)                     | CMOS (CD4069)                 |
 |---------------------------------|----------------------------------|-------------------------------|
-| **Input High Voltage (VIH)**    | Mínimo 2V                        | Mínimo 5V                     |
+| **Input High Voltage (VIH)**    | Mínimo 2V                        | Mínimo 3.5V                   |
 | **Input Low Voltage (VIL)**     | Máximo 0.8V                      | Máximo 1V                     |
-| **Output High Voltage (VOH)**   | Mínimo 2.5V (típicamente 3.5V)   | Típicamente 4.95V             |
-| **Output Low Voltage (VOL)**    | Máximo 0.5V (típicamente 0.35V)  | Máximo 0.5V                   |
+| **Output High Voltage (VOH)**   | Mínimo 2.7V (típico 3.4V)        | Típico 4.95V                  |
+| **Output Low Voltage (VOL)**    | Máximo 0.5V (típico 0.35V)       | Máximo 0.05V                  |
 
 ### Fan-in y Fan-out
 
@@ -50,7 +45,8 @@ El **fan-out** es la cantidad de dispositivos que una puerta lógica puede contr
 | Característica             | TTL (74LS04)                 | CMOS (CD4069)                      |
 |----------------------------|------------------------------|------------------------------------|
 | **Fan-out**                | Hasta 10 puertas TTL         | Más de 50 puertas CMOS             |
-| **Fan-in**                 | Limitado a dos entradas      | Puede tener un número alto de entradas debido a la alta impedancia de entrada |
+| **Fan-in**                 | Limitado a 1-2 entradas      | Número alto de entradas debido a alta impedancia |
+
 
 ### Disipación de Potencia
 
@@ -58,7 +54,120 @@ La disipación de potencia es un parámetro crucial para entender la eficiencia 
 
 - **TTL (74LS04)**: Disipación de potencia entre 1 mW y 20 mW por compuerta.
 - **CMOS (CD4069)**: Disipación de potencia de 0.2 mW a 10 mW, dependiendo de la frecuencia de operación.
+  
 
 ## Circuitos Equivalentes
 ### Circuito equivalente de: CD4069
+
+
+
+## Análisis de Parámetros de las Puertas Lógicas CMOS y TTL
+
+### Resultados Experimentales
+
+Se aplicó una señal cuadrada de 1 kHz y se midieron los siguientes parámetros:
+
+| Parámetro | CMOS           | TTL            |
+|-----------|----------------|----------------|
+| VIH       | 1.04 V         | 2.36 V         |
+| VIL       | 0.64 V         | 0.64 V         |
+| VOH       | 4.32 V         | 4.08 V         |
+| VOL       | 0.24 V         | 0.68 V         |
+| UP (tr)   | 92 µs          | 118 µs         |
+| DOWN (tf) | 110 µs         | 94 µs          |
+
+---
+## Análisis de Medidas
+
+
+### CMOS
+
+
+1. **VIH:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VIH%20CMOS.jpeg" alt="VIH CMOS" width="50%">
+
+2. **VIL:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VIL%20CMOS.jpeg" alt="VIL CMOS" width="50%">
+
+3. **VOH:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VOH%20CMOS.jpeg" alt="VOH CMOS" width="50%">
+
+4. **VOL:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VOL%20CMOS.jpeg" alt="VOL CMOS" width="50%">
+
+---
+
+### TTL
+
+
+1. **VIH:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VIH%20TTL.jpeg" alt="VIH TTL" width="50%">
+
+2. **VIL:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VIL%20TTL.jpeg" alt="VIL TTL" width="50%">
+
+3. **VOH:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VOH%20TTL.jpeg" alt="VOH TTL" width="50%">
+
+4. **VOL:**
+   <img src="/laboratorios/Laboratorio01/Imagenes/VOL%20TTL.jpeg" alt="VOL TTL" width="50%">
+
+
+### Comparación con los Datasheets
+## Análisis de Medidas y Comparación con Datasheets
+
+| Parámetro | Experimental CMOS | Datasheet CMOS | Experimental TTL | Datasheet TTL | Cumplimiento |
+|-----------|-------------------|----------------|------------------|---------------|--------------|
+| **VIH**   | 1.04 V           | Mín. 3.5 V    | 2.36 V          | Mín. 2 V      | CMOS: No TTL: Sí |
+| **VIL**   | 0.64 V           | Máx. 1 V      | 0.64 V          | Máx. 0.8 V    | Sí            |
+| **VOH**   | 4.32 V           | Típ. 4.95 V   | 4.08 V          | Típ. 3.4 V    | CMOS: Ligeramente inferior, TTL: Sí |
+| **VOL**   | 0.24 V           | Máx. 0.05 V   | 0.68 V          | Típ. 0.35 V   | CMOS: Ligeramente superior, TTL: Ligeramente superior |
+
+---
+
+### Gráficos de Entrada y Salida
+
+A continuación, se presentan los gráficos obtenidos en el osciloscopio para las medidas de cada parámetro:
+
+#### CMOS
+- ##### Entrada y Salida
+<img src="/laboratorios/Laboratorio01/Imagenes/CMOS%20XY.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+
+- ##### Tiempo de Subida 
+   <img src="/laboratorios/Laboratorio01/Imagenes/CMOS%20UP.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+   
+- ##### Tiempo de bajada 
+  <img src="/laboratorios/Laboratorio01/Imagenes/CMOS%20DOWN.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+
+#### TTL
+- ##### Entrada y Salida:
+   <img src="/laboratorios/Laboratorio01/Imagenes/TTL%20XY.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+- ##### Tiempo de Subida:
+   <img src="/laboratorios/Laboratorio01/Imagenes/SUBIDA%20TTL.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+- ##### Tiempo de Bajada**:
+   <img src="/laboratorios/Laboratorio01/Imagenes/TTL%20DOWN.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+
+
+### Conclusiones
+
+1. **CMOS**:
+   - El valor experimental de **VIH** no cumple con las especificaciones mínimas del datasheet, posiblemente debido a la configuración experimental o interferencias externas.
+   - **VOH** y **VOL** cumplen en mayor medida, aunque **VOL** muestra una ligera desviación.
+   - La disipación de potencia y tiempos de transición son bajos, alineándose con la naturaleza eficiente de la tecnología CMOS.
+
+2. **TTL**:
+   - Los valores de entrada y salida cumplen con las especificaciones del datasheet. Los tiempos de propagación son más rápidos que los de CMOS, lo que confirma la ventaja de TTL en aplicaciones donde la velocidad es crítica.
+   - **VOL** está levemente por encima del valor típico, pero dentro de los límites funcionales.
+
+3. **Recomendación para Aplicaciones**:
+   - **CMOS**: Ideal para sistemas de bajo consumo y alta impedancia.
+   - **TTL**: Recomendado para aplicaciones donde la velocidad es un factor crítico.
+
+4. **Impacto de la Carga**:
+   - Las diferencias observadas en los tiempos de transición y niveles de salida están relacionadas con la carga capacitiva y las condiciones de prueba.
+
+---
+
+
+
 
