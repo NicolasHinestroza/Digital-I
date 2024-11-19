@@ -13,9 +13,11 @@ La electrónica digital utiliza diferentes tecnologías para construir circuitos
 
 Estas tecnologías difieren en términos de voltaje de operación, disipación de potencia, tiempos de retardo y capacidad de carga (fan-out), lo que afecta su idoneidad en diferentes aplicaciones electrónicas.
 
-## Comparación de Dispositivos TTL y CMOS
 
-## Comparación de Dispositivos TTL y CMOS
+
+## Circuitos Equivalentes
+### Circuito equivalente de: CD4069 
+
 
 CMOS:<br>
 La tecnología CMOS tiene como principio de funcionamiento interno el estar conformada por dos transistores MOSFET, uno de canal N y otro de canal P, los cuales se encuentran complementados, es decir que mientras uno se encuentra activo el otro no. 
@@ -39,7 +41,7 @@ CIRCUITO:
  
 
 
-
+### Circuito equivalente de: 74LS04
 
 
 TTL:<br>
@@ -58,6 +60,8 @@ CIRCUITO:
 
   <img src="/laboratorios/Laboratorio01/Imagenes/TTL-V.JPG" alt="VIH CMOS" width="50%">
  
+
+## Comparación de Dispositivos TTL y CMOS
 
 
 
@@ -102,8 +106,6 @@ La disipación de potencia es un parámetro crucial para entender la eficiencia 
 - **CMOS (CD4069)**: Disipación de potencia de 0.2 mW a 10 mW, dependiendo de la frecuencia de operación.
   
 
-## Circuitos Equivalentes
-### Circuito equivalente de: CD4069
 
 
 
@@ -192,6 +194,13 @@ A continuación, se presentan los gráficos obtenidos en el osciloscopio para la
    <img src="/laboratorios/Laboratorio01/Imagenes/SUBIDA%20TTL.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
 - ##### Tiempo de Bajada**:
    <img src="/laboratorios/Laboratorio01/Imagenes/TTL%20DOWN.jpeg" alt="Curva de Entrada y Salida CMOS" width="50%">
+
+### Oscilador en anillo basado en la compuerta NOT
+
+  <img src="/laboratorios/Laboratorio01/Imagenes/CMOS-V.JPG" alt="VIH CMOS" width="50%">
+
+
+
 
 
 ### Conclusiones
