@@ -106,6 +106,7 @@ La disipación de potencia es un parámetro crucial para entender la eficiencia 
 - **CMOS (CD4069)**: Disipación de potencia de 0.2 mW a 10 mW, dependiendo de la frecuencia de operación.
   
 
+### Circuitos Compuertas Lógicas
 
 
 
