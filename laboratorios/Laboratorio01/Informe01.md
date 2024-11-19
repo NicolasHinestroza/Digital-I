@@ -197,7 +197,23 @@ A continuación, se presentan los gráficos obtenidos en el osciloscopio para la
 
 ### Oscilador en anillo basado en la compuerta NOT
 
-  <img src="/laboratorios/Laboratorio01/Imagenes/CMOS-V.JPG" alt="VIH CMOS" width="50%">
+Los osciladores en anillo basados en la compuerta NOT se caracterizan por generar una señal oscilatoria de alta frecuencia sin necesidad de una señal de entrada externa. Se forma conectando un número impar de compuertas lógicas NOT (inversores) en un bucle cerrado.
+
+Su funcionamiento basico consiste en que al conectar la entrada de la primera compuerta con la salida de la ultima,  se crea una realimentación. Ademas, debido a al retraso inherente en cada compuerta el sistema no logra alcanzar un estado fijo, lo que produce una continua alternancia. 
+
+#### Oscilador en anillo con 3 compuertas NOT
+
+  <img src="/laboratorios/Laboratorio01/Imagenes/Anillo-3.JPG" alt="VIH CMOS" width="50%">
+   <img src="/laboratorios/Laboratorio01/Imagenes/Vout-Anillo-3.JPG" alt="VIH CMOS" width="50%">
+     <img src="/laboratorios/Laboratorio01/Imagenes/Anillo-3-LAB.jpg" alt="VIH CMOS" width="50%">
+     
+#### Oscilador en anillo con 5 compuertas NOT
+
+ <img src="/laboratorios/Laboratorio01/Imagenes/Anillo-5.JPG" alt="VIH CMOS" width="50%">
+   <img src="/laboratorios/Laboratorio01/Imagenes/Vout-Anillo-5.JPG" alt="VIH CMOS" width="50%">
+     <img src="/laboratorios/Laboratorio01/Imagenes/Anillo-5-LAB.jpg" alt="VIH CMOS" width="50%">
+  
+  
 
 
 
