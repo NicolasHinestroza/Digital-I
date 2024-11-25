@@ -15,6 +15,7 @@
 
 El objetivo de esta práctica es estudiar las características de dispositivos lógicos fabricados en tecnologías TTL y CMOS mediante el análisis teórico de sus especificaciones. Posteriormente, se implementará una operación lógica para observar diferencias en parámetros como tiempo de respuesta, disipación de potencia y fan-out.
 
+
 ## Resumen Teórico
 
 La electrónica digital utiliza diferentes tecnologías para construir circuitos lógicos, y entre las más comunes están las tecnologías **TTL (Transistor-Transistor Logic)** y **CMOS (Complementary Metal-Oxide-Semiconductor)**. Cada tecnología tiene características específicas que afectan el rendimiento y las aplicaciones de los circuitos. En esta práctica se examinan dos negadores:
@@ -68,7 +69,8 @@ La disipación de potencia es un parámetro crucial para entender la eficiencia 
 - **CMOS (CD4069)**: Disipación de potencia de 0.2 mW a 10 mW, dependiendo de la frecuencia de operación.
 
 ---
-
+### Circuito Implementado
+Para este caso, el circuito implementado fue el siguiente:
 ## Conclusiones
 
 1. **Velocidad de operación**: El dispositivo TTL (74LS04) tiene un tiempo de retardo de propagación más bajo, lo que lo hace adecuado para aplicaciones de alta velocidad. El CMOS (CD4069) es más lento en comparación, pero su bajo consumo de potencia lo hace ideal para aplicaciones de bajo consumo energético.
